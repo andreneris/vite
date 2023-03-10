@@ -6,8 +6,7 @@ import Form, { Templates } from '@rjsf/mui';
 import {
   ObjectFieldTemplateProps,
   BaseInputTemplateProps,
-  getUiOptions,
-  getTemplate,
+  getUiOptions
 } from '@rjsf/utils';
 //import './App.css';
 import { Grid, Box } from '@mui/material/';
@@ -52,13 +51,13 @@ export function FluidFormLayout(props: ObjectFieldTemplateProps): JSX.Element {
 
 const MyBaseInputTemplate = (props: BaseInputTemplateProps) => {
   const { registry, uiOptions } = props;
-  //const { BaseInputTemplate } = Templates;
+  const { BaseInputTemplate } = Templates;
   //const { templates: { BaseInputTemplate } } = getDefaultTemplates();
-  const BaseInputTemplate = getTemplate(
+  /*const BaseInputTemplate = getTemplate(
     'BaseInputTemplate',
     registry,
     uiOptions
-  );
+  );*/
   return <BaseInputTemplate {...props} size="small" />;
 };
 
